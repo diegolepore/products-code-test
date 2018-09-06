@@ -1,0 +1,83 @@
+.AddItem {
+    margin: 30px 0 80px;
+}
+
+.AddItem h2 {
+    font-size: 20px;
+}
+
+.AddItem .form-wrapper {
+    border: 2px solid;
+    padding: 20px;
+}
+
+.AddItem .form-wrapper .form-group {
+    margin-right: 2%;
+    width: 27%;
+}
+
+.AddItem .form-wrapper .form-group input {
+    border: 2px solid;
+    border-radius: 0;
+    width: 100%;
+}
+
+.AddItem button {
+    color: #000;
+    border: 2px solid;
+    border-radius: 0;
+    background-color: #fff;
+    width: 8%;
+    position: relative;
+}
+
+.AddItem button:after {
+    content: "";
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    right: -6px;
+    top: 6px;
+    z-index: -1;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.AddItem button:hover:after {
+    right: 0px;
+    top: 0px;
+}
+.AddItem button:hover {
+    color: #000;
+    border-color: #000;
+    background-color: #fff;
+}
+
+@media screen and (max-width: 991px) {
+    .AddItem button {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .AddItem .form-wrapper .form-group {
+        width: 32%;
+    }
+    .AddItem .form-wrapper .form-group:last-of-type {
+        margin-right: 0;
+    }
+    .AddItem button {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .AddItem button {
+        margin-top: 0px;
+    }
+}

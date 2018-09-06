@@ -14,8 +14,8 @@ class GrandTotal extends Component {
     }
     render() {
         return (
-            <tr>
-                <td colSpan="4" className="text-right">{this.calculateGrandTotal()}</td>
+            <tr className="grandTotalTr">
+                <td colSpan="4" className="text-right"><div className="grandTotal"><strong>Grand Total: </strong>{this.calculateGrandTotal()}</div></td>
             </tr>
         );
     }
