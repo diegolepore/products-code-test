@@ -9,7 +9,7 @@ First of all, make sure you have [Nodejs](https://nodejs.org/en/) installed. Rig
 Clicking either the `Yarn` or the `npm` links above will lead you to the corresponding instructions to set up whichever package manager you've picked.
 
 Once you've installed those, go to the project folder via command line (in your terminal app) :
-```cd your/path/here/would-you-rather-app ```
+```cd your/path/here/dierbro-code-test ```
 
 Then, run the following commands depending on which package manager you want to use, either `npm` or `yarn` , let's start with `npm` :
 
