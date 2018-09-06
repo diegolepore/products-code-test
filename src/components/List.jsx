@@ -2,25 +2,34 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import Item from './Item'
 import GrandTotal from './GrandTotal'
+import { Table} from 'reactstrap';
 
 class List extends Component {
-    
     render() {
         const { products, productsList } = this.props
         return (
             <div>
-                List component
-                <ul>               
-                    {(products.map((item) => (
-                            <li className='product-item' key={item}>
-                                <Item itemProduct={productsList[item]} />
-                            </li>      
-                        )))
-                    }
-                </ul>
+                <h2>Items</h2>
+                <Table>
+                    <thead>
+                        <tr>
+                            <th><strong>Product</strong></th>
+                            <th><strong>Quantity</strong></th>
+                            <th><strong>Price</strong></th>
+                            <th className="text-right"><strong>Total</strong></th>
+                        </tr>
+                    </thead>
+                    <tbody>      
+                        {(products.map((item) => (
+                            <Item itemProduct={productsList[item]} key={item} />
+                        )))}
 
-                <GrandTotal />
+                    
+                        <GrandTotal />
+                        
 
+                    </tbody>
+                </Table>
             </div>
         )
     }

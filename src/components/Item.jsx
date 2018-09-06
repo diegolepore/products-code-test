@@ -1,17 +1,17 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 class Item extends Component {
     render() {
         const { itemProduct } = this.props
         return (
-            <div>
-                <p>{itemProduct.product}</p>
-                <p>{itemProduct.qty}</p>
-                <p>{itemProduct.price}</p>
-                <p><strong>Total:</strong> {(itemProduct.qty * itemProduct.price).toFixed(2)}</p>
-            </div>
+            <tr>
+                <td>{itemProduct.product}</td>
+                <td>{itemProduct.qty}</td>
+                <td>{itemProduct.price}</td>
+                <td className="text-right"> {(itemProduct.qty * itemProduct.price).toFixed(2)}</td>
+            </tr>
         );
     }
 }
 
-export default Item;
+export default Item

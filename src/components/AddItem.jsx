@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { addProduct } from '../actions/list'
 import idGenerator from 'react-id-generator'
+import { Button, Form, FormGroup, Input } from 'reactstrap';
 
 class AddItem extends Component {
 
@@ -10,8 +11,6 @@ class AddItem extends Component {
         qty: "",
         price: ""
     }
-
-    
 
     handleChange = (e) => {
         this.setState({
@@ -37,20 +36,22 @@ class AddItem extends Component {
     render() {
         return (
             <div>
-                <form onSubmit={this.handleSubmit}>
-                    <div>
-                        <input 
-                        type="text" 
-                        value={this.state.product}
-                        name="product" 
-                        placeholder="Product name" 
-                        required
-                        onChange={this.handleChange}
-                        />
-                    </div>
+                <h2>Add new item</h2>
+                <Form inline onSubmit={this.handleSubmit}>
 
-                    <div>
-                        <input 
+                    <FormGroup>
+                        <Input 
+                            type="text" 
+                            value={this.state.product}
+                            name="product" 
+                            placeholder="Product name" 
+                            required
+                            onChange={this.handleChange}
+                            />
+                    </FormGroup>
+
+                    <FormGroup>
+                        <Input 
                         type="text" 
                         value={this.state.qty}
                         name="qty" 
@@ -58,10 +59,10 @@ class AddItem extends Component {
                         required
                         onChange={this.handleChange}
                         />
-                    </div>
+                    </FormGroup>
 
-                    <div>
-                        <input 
+                    <FormGroup>
+                        <Input 
                         type="text" 
                         value={this.state.price}
                         name="price" 
@@ -69,12 +70,10 @@ class AddItem extends Component {
                         required
                         onChange={this.handleChange}
                         />
-                    </div>
+                    </FormGroup>
                     
-                    <div>
-                        <button type="submit">Add</button>
-                    </div>
-                </form>
+                    <Button type="submit">Add</Button>
+                </Form>
             </div>
         )
     }
